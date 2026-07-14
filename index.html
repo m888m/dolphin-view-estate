@@ -122,8 +122,11 @@ figcaption{margin-top:.8rem; font-size:.74rem; letter-spacing:.12em; text-transf
 .feature>img{width:100%; height:auto; display:block}
 .feature--portrait{max-width:760px; margin-inline:auto}
 .film-embed{position:relative; width:100%; background:#0c1413; overflow:hidden}
-.film-embed iframe{position:absolute; inset:0; width:100%; height:100%; border:0; display:block}
+.film-embed iframe,.film-embed video{position:absolute; inset:0; width:100%; height:100%; border:0; display:block}
+.film-embed video{object-fit:cover}
 .film-embed--portrait{max-width:440px; margin-inline:auto}
+.sound-toggle{position:absolute; right:12px; bottom:12px; z-index:2; cursor:pointer; border:0; border-radius:999px; padding:.55rem .95rem; font-family:var(--sans); font-size:.7rem; font-weight:600; letter-spacing:.04em; color:#F3F1E9; background:rgba(10,20,19,.6); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); transition:background .2s}
+.sound-toggle:hover{background:rgba(10,20,19,.85)}
 
 /* deep band */
 .band{background:var(--teal-deep); color:#EFF4F1}
@@ -220,7 +223,7 @@ figcaption{margin-top:.8rem; font-size:.74rem; letter-spacing:.12em; text-transf
         <div class="spec__cell"><div class="spec__k">Pool</div><div class="spec__v">17 m<span class="spec__n">sea-facing infinity</span></div></div>
         <div class="spec__cell"><div class="spec__k">Airport</div><div class="spec__v">2 hours<span class="spec__n">Colombo · CMB</span></div></div>
         <div class="spec__cell"><div class="spec__k">Self-sufficient</div><div class="spec__v">Solar<span class="spec__n">private well · filtration</span></div></div>
-        <div class="spec__cell"><div class="spec__k">Ownership</div><div class="spec__v">Clean title<span class="spec__n">international-friendly</span></div></div>
+        <div class="spec__cell"><div class="spec__k">Ownership</div><div class="spec__v">100% foreign<span class="spec__n">inquire for details</span></div></div>
       </div>
     </div>
   </section>
@@ -239,33 +242,36 @@ figcaption{margin-top:.8rem; font-size:.74rem; letter-spacing:.12em; text-transf
     </div>
 
     <figure class="feature reveal">
-      <div class="film-embed" style="aspect-ratio:16/9"><iframe src="https://drive.google.com/file/d/1LUmTYYm7ai8Ek6noA_RO80roUkcYrqxx/preview" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" title="The living room — 180° ocean view"></iframe></div>
-      <figcaption>The living room — the 180° ocean view</figcaption>
+      <div class="film-embed" style="aspect-ratio:16/9">
+        <video id="estate-tour" class="feat-vid" muted loop playsinline preload="metadata" poster="./assets/img/estate_tour_poster.jpg"><source src="./assets/video/estate_tour.mp4" type="video/mp4"></video>
+        <button class="sound-toggle" type="button" aria-label="Toggle sound" data-muted="true">🔇&nbsp;Tap for sound</button>
+      </div>
+      <figcaption>Arrive — from the beach, past the pool, and inside</figcaption>
     </figure>
 
-    <div class="split split--phi-rev reveal" style="margin-top:clamp(2.4rem,6vw,4.5rem)">
-      <div class="stack">
-        <p class="eyebrow">Estate Highlights</p>
-        <hr class="hair">
-        <h2>Harmony through symmetry, clean lines, and the golden ratio.</h2>
-        <p class="body">The sophisticated architecture and design create harmony through symmetry, clean lines, and the Greek golden ratio. The villa features high-vaulted ceilings, elegant teakwood floors, sculpted columns, and intricate wooden window grids. Its walls are adorned with sparkling white natural stones, each carefully set by craftsmen's hands, while rounded staircases, light bridges, and the graceful curves of Roman tiles on the roof accentuate the serenity of the building.</p>
-        <p class="body">The expansive 320&nbsp;m² / 3,444&nbsp;sq&nbsp;ft villa comfortably accommodates up to eight, across two floors turned toward the sea.</p>
-      </div>
-      <figure class="fig fig--tall"><img loading="lazy" src="./assets/img/villa_columns.jpg" alt="The columned villa with its Roman-tile roof, framed by coconut palms, from the beach"></figure>
-    </div>
-
-    <figure class="feature reveal"><img loading="lazy" src="./assets/img/estate_grove.jpg" alt="The villa nestled among the coconut grove"><figcaption>The villa in its coconut grove</figcaption></figure>
-
     <div class="reveal" style="margin-top:clamp(2.6rem,6vw,4.8rem)">
-      <p class="eyebrow">The Kitchen</p>
+      <p class="eyebrow">Architecture</p>
       <hr class="hair">
       <div class="split split--phi">
-        <h3>An open kitchen at the heart of the house.</h3>
-        <p class="body">Generously proportioned living and dining areas sit at the centre of the villa, opening to an island kitchen beneath the vaulted teak ceiling.</p>
+        <h2>Harmony through symmetry, clean lines, and the golden ratio.</h2>
+        <p class="body">The sophisticated architecture and design create harmony through symmetry, clean lines, and the Greek golden ratio — high-vaulted ceilings, elegant teakwood floors, sculpted columns, and intricate wooden window grids. Walls of sparkling white natural stone, each set by hand, and the graceful curves of Roman tiles on the roof accentuate the serenity of the building.</p>
       </div>
       <figure class="feature">
-        <div class="film-embed" style="aspect-ratio:16/9"><iframe src="https://drive.google.com/file/d/1LRgpCjYtlfmopDTLBUD-Uu8CQ0lqyZB4/preview" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" title="The kitchen — with music"></iframe></div>
-        <figcaption>The kitchen — press play for sound</figcaption>
+        <div class="film-embed film-embed--portrait" style="aspect-ratio:9/16"><video class="feat-vid" muted loop playsinline preload="metadata" poster="./assets/img/arch_grove_poster.jpg"><source src="./assets/video/arch_grove.mp4" type="video/mp4"></video></div>
+        <figcaption>The villa, through the coconut grove</figcaption>
+      </figure>
+    </div>
+
+    <div class="reveal" style="margin-top:clamp(2.6rem,6vw,4.8rem)">
+      <p class="eyebrow">Living area</p>
+      <hr class="hair">
+      <div class="split split--phi">
+        <h3>Generously proportioned, and open to the sea.</h3>
+        <p class="body">The living and dining areas sit at the centre of the villa, beneath the vaulted teak ceiling, opening to an island kitchen and 180° of ocean.</p>
+      </div>
+      <figure class="feature">
+        <div class="film-embed" style="aspect-ratio:16/9"><video class="feat-vid" muted loop playsinline preload="metadata" poster="./assets/img/living_poster.jpg"><source src="./assets/video/living.mp4" type="video/mp4"></video></div>
+        <figcaption>The living room — the 180° ocean view</figcaption>
       </figure>
     </div>
 
@@ -277,11 +283,11 @@ figcaption{margin-top:.8rem; font-size:.74rem; letter-spacing:.12em; text-transf
         <p class="body">Both well-appointed, each with an en-suite bathroom and a large veranda across two floors, each able to host a family of four.</p>
       </div>
       <figure class="feature">
-        <div class="film-embed" style="aspect-ratio:16/9"><iframe src="https://drive.google.com/file/d/1LVD6xuxMrX2H2RsJ6tS_uKvSvUICWb3A/preview" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" title="Inside the Sapphire suite"></iframe></div>
+        <div class="film-embed" style="aspect-ratio:16/9"><video class="feat-vid" muted loop playsinline preload="metadata" poster="./assets/img/suite_full_poster.jpg"><source src="./assets/video/suite_full.mp4" type="video/mp4"></video></div>
         <figcaption>Inside the Sapphire suite</figcaption>
       </figure>
       <figure class="feature">
-        <div class="film-embed film-embed--portrait" style="aspect-ratio:9/16"><iframe src="https://drive.google.com/file/d/1LZuZkddjSmSvzUk-lr9Ba2be5uKjns9d/preview" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" title="The Sapphire suite — upper floor"></iframe></div>
+        <div class="film-embed film-embed--portrait" style="aspect-ratio:9/16"><video class="feat-vid" muted loop playsinline preload="metadata" poster="./assets/img/upper_full_poster.jpg"><source src="./assets/video/upper_full.mp4" type="video/mp4"></video></div>
         <figcaption>The Sapphire suite — upper floor</figcaption>
       </figure>
     </div>
@@ -297,11 +303,6 @@ figcaption{margin-top:.8rem; font-size:.74rem; letter-spacing:.12em; text-transf
       </div>
       <figure class="feature"><img loading="lazy" src="./assets/img/pool_ocean.jpg" alt="The long infinity pool running toward the ocean, framed by palms"><figcaption>The 17-metre infinity pool</figcaption></figure>
     </div>
-
-    <figure class="feature reveal" style="margin-top:clamp(2.2rem,5vw,3.5rem)">
-      <div class="film-embed film-embed--portrait" style="aspect-ratio:9/16"><iframe src="https://drive.google.com/file/d/1LTOjuLpqYzgZKpWNQbZl-EMVL7NSoRh7/preview" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" title="Through the coconut grove"></iframe></div>
-      <figcaption>Through the coconut grove, to the beach</figcaption>
-    </figure>
   </section>
 
   <!-- 4 · THE SETTING -->
@@ -434,6 +435,15 @@ figcaption{margin-top:.8rem; font-size:.74rem; letter-spacing:.12em; text-transf
       fvs.forEach(function(v){vio.observe(v)});
     } else { fvs.forEach(function(v){v.play().catch(function(){})}); }
   }
+
+  // tap-for-sound on the entry tour video
+  var st=document.querySelector('.sound-toggle');
+  if(st){ st.addEventListener('click',function(){
+    var v=document.getElementById('estate-tour'); if(!v) return;
+    v.muted=!v.muted;
+    if(!v.muted){ v.play().catch(function(){}); }
+    st.innerHTML = v.muted ? '🔇&nbsp;Tap for sound' : '🔊&nbsp;Sound on';
+  }); }
 })();
 </script>
 
